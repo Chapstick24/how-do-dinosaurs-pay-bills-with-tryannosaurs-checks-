@@ -1,7 +1,7 @@
 let transactions = [];
 let myChart;
 
-
+// with tudar 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js')
@@ -144,6 +144,8 @@ function sendTransaction(isAdding) {
       amountEl.value = "";
     }
   })
+
+  // add saveRecord 
   .catch(err => {
     // fetch failed, so save in indexed db
     saveRecord(transaction);
